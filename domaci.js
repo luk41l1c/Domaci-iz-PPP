@@ -154,3 +154,18 @@ console.log(filtrirajReci(["a", "asd", "a", "asfff3"],2));
 /*Zadatak 10.
 Napišite funkciju frekSlova() koja uzima string i pravi listu frekvencija slova koja se pojavljuju u stringu. 
 Listu frekvencija predstavite kao JavaScript objekat. Testirajte program sa frekSlova(“abbabcbdbabdbdbabababcbcbab”).*/
+
+function frekSlova(s) {
+	frek = {};
+	for(var i = 0; i<s.length; i++) {
+		if(s[i] in frek) {
+			frek[s[i]]++;
+		}
+		else {
+			frek[s[i]] = 1;
+		}
+	}
+	return frek;
+}
+
+console.log(frekSlova("abbabcbdbabdbdbabababcbcbab"));
